@@ -1,8 +1,10 @@
 import Image from "next/image";
+import StatsCardSection from "../components/sections/HeroStatsCardSection";
+import LandingStatsCard from './../components/sections/LandingStatsCard';
 
 export default function Home() {
   return (
-    <div className="bg-[#1E1E1E] text-white">
+    <div className="bg-red-500 text-white">
       <div className="flex justify-between items-center gap-12 ps-36 relative">
         <div className="flex-col space-y-10 w-1/2">
           <div>
@@ -13,20 +15,7 @@ export default function Home() {
             <button className="text-white border-2 border-[#262626] px-6 py-4 rounded-lg">Learn More</button>
             <button className="text-white bg-purple-600 px-6 py-4 rounded-lg">Browse Properties</button>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex-1 bg-[#1A1A1A] border-2 border-[#262626] rounded-lg  px-6 py-4">
-              <h1 className="text-[40px]">200+</h1>
-              <p className="text-gray-600 text-md">Happy Customer</p>
-            </div>
-            <div className="flex-1 bg-[#1A1A1A] border-2 border-[#262626] rounded-lg  px-6 py-4">
-              <h1 className="text-[40px]">150+</h1>
-              <p className="text-gray-600 text-md">Projects Completed</p>
-            </div>
-            <div className="flex-1 bg-[#1A1A1A] border-2 border-[#262626] rounded-lg px-6 py-4">
-              <h1 className="text-[40px]">300+</h1>
-              <p className="text-gray-600 text-md">Clients Served</p>
-            </div>
-          </div>
+          <StatsCardSection />
         </div>
         <div className="w-1/2"> 
           <Image
@@ -44,7 +33,9 @@ export default function Home() {
             className="object-cover rounded-full"
           />
         </div>
+      
       </div>
+      <LandingStatsCard></LandingStatsCard>
     </div>
   );
 }
